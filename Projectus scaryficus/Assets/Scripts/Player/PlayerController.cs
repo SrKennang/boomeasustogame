@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     [SerializeField] private float speed;
+    [SerializeField] private float runSpeed;
     [SerializeField] private Transform cam;
     [SerializeField] private float fallSpeed;
 
@@ -45,9 +46,13 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(gravity);
 
-        if(direction.magnitude >= 0.1f)
+        if(direction.magnitude >= 0.1f && !Input.GetKey(KeyCode.LeftShift))
         {
             controller.Move(moveInput * speed * Time.deltaTime);
+        } 
+        else if (direction.magnitude >= 0.1f && Input.GetKey(KeyCode.LeftShift))
+        {
+            controller.Move(moveInput * runSpeed * Time.deltaTime);
         }
     }
 }
