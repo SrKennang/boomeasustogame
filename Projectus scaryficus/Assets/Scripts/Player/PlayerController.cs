@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, cam.eulerAngles.y, 0);
 
-        controller.Move(gravity);
+        controller.Move(gravity * Time.deltaTime);
 
         if(direction.magnitude >= 0.1f && !Input.GetKey(KeyCode.LeftShift))
         {

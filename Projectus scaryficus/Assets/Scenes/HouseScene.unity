@@ -57316,7 +57316,7 @@ MonoBehaviour:
   speed: 2.6
   runSpeed: 4.8
   cam: {fileID: 963194228}
-  fallSpeed: 2
+  fallSpeed: 12
 --- !u!136 &1873306764
 CapsuleCollider:
   m_ObjectHideFlags: 0
