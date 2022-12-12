@@ -17328,7 +17328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890194762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.455, y: 0.449, z: 0}
+  m_LocalPosition: {x: 0, y: 0.449, z: 0}
   m_LocalScale: {x: 0.1330716, y: 0.11170467, z: 0.5355782}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19356,7 +19356,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 90
+  field of view: 80
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -19382,7 +19382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.901344, y: 9.142569, z: 31.301172}
+  m_LocalPosition: {x: 21.446344, y: 9.142569, z: 31.301172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19941,6 +19941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1029497912}
   - component: {fileID: 1029497911}
+  - component: {fileID: 1029497913}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -19969,7 +19970,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 890194763}
   m_Lens:
-    FieldOfView: 90
+    FieldOfView: 80
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -19994,14 +19995,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029497910}
   m_LocalRotation: {x: 0.083494894, y: -0.73449117, z: 0.09191835, w: 0.66716}
-  m_LocalPosition: {x: 21.901344, y: 9.142569, z: 31.301172}
+  m_LocalPosition: {x: 21.446344, y: 9.142569, z: 31.301172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1437222131}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1029497913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029497910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Offset: {x: 0, y: 0, z: 0}
+  m_ApplyAfter: 1
+  m_PreserveComposition: 0
 --- !u!1 &1039561328
 GameObject:
   m_ObjectHideFlags: 0
@@ -29162,6 +29178,7 @@ GameObject:
   - component: {fileID: 1437222134}
   - component: {fileID: 1437222133}
   - component: {fileID: 1437222132}
+  - component: {fileID: 1437222135}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -29271,6 +29288,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1437222135
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437222130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 1
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!43 &1438671050
 Mesh:
   m_ObjectHideFlags: 0
@@ -35985,7 +36019,7 @@ Transform:
   - {fileID: 1461898040}
   - {fileID: 890194763}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1873306763
 MonoBehaviour:
@@ -35999,7 +36033,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dce57037964a7a43b5d9c3a76bd5181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 2.6
+  runSpeed: 4.8
   cam: {fileID: 963194228}
   fallSpeed: 2
 --- !u!136 &1873306764
@@ -36030,8 +36065,8 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_StepOffset: 0.5
+  m_SkinWidth: 0.05
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!43 &1877883406
